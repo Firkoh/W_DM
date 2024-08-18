@@ -1,0 +1,5 @@
+{
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "editor.find.seedSearchStringFromSelection": "never",
+    "search.actionsPosition": "right"
+}
