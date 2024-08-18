@@ -3,7 +3,7 @@ include "../../service/basisdata.php";
 
 // Ambil data dari form
 $judul = $_POST['judul'];
-$isi = $_POST['news'];
+$isi = $_POST['isi'];
 $gambar = $_FILES['gambar'];
 
 // Cek jika gambar diupload
@@ -51,7 +51,7 @@ if ($gambar['name'] != "") {
 }
 
 // Update data berita
-$id_berita = $_POST['id_berita'];
+$id_berita = $_POST['id'];
 $query = "UPDATE berita SET judul='$judul', isi='$isi', gambar='$gambar_nama' WHERE id='$id_berita'";
 $result = mysqli_query($conn, $query);
 

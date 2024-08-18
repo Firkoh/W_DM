@@ -8,12 +8,12 @@ if (!$conn) {
 
 // Ambil data dari form
 $judul = $_POST["judul"];
-$isi = $_POST["news"];
-$gambar = $_FILES["image"];
+$isi = $_POST["isi"];
+$gambar = $_FILES["gambar"];
 
 // Upload gambar
-$dir = "uploads";
-$target_file = $dir . basename($gambar["name"]);
+$dir = "/uploads";
+$target_file = $dir . basename($gambar["image"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
@@ -30,7 +30,7 @@ if (isset($gambar)) {
   }
   // Jika semuanya oke, upload file
   if ($uploadOk == 1) {
-    if (move_uploaded_file($gambar["tmp_name"], $target_file)) {
+    if (move_uploaded_file($gambar["image"], $target_file)) {
     } else {
       echo "Maaf, terjadi kesalahan saat mengupload file.";
     }

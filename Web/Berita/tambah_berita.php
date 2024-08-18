@@ -4,11 +4,11 @@
         <form method="post" action="simpan_berita.php">
             <div class="form-group">
                 <label for="judul">Judul Berita:</label>
-                <input type="text" class="form-control" id="judul" name="judul" required>
+                <input type="text" class="form-control" id="judul" name="judul" required value="ini Judul">
             </div>
             <div class="form-group">
                 <label for="isi">Isi Berita:</label>
-                <textarea class="form-control" id="news" name="news" rows="5" required></textarea>
+               <textarea class="form-control" id="isi" name="isi" rows="5" required>Ini Berita</textarea>
             </div>
             <div class="form-group">
                 <label for="gambar">Pilih Gambar Yang Akan Di Unggah Ke berita</label>
