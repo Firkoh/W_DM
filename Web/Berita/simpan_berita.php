@@ -12,9 +12,9 @@ $isi = $_POST["isi"];
 $gambar = $_FILES["gambar"];
 
 // Upload gambar
-$dir = "/uploads";
-$target_file = $dir . basename($gambar["image"]);
-$uploadOk = 1;
+$dir = "uploads/";
+$target_file = $dir . basename($gambar["name"]);
+$uploadOk = 1;                                          
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 if (isset($gambar)) {
@@ -30,7 +30,8 @@ if (isset($gambar)) {
   }
   // Jika semuanya oke, upload file
   if ($uploadOk == 1) {
-    if (move_uploaded_file($gambar["image"], $target_file)) {
+    echo "foto masuk";
+    if (move_uploaded_file($gambar["tmp_name"], $target_file)) {
     } else {
       echo "Maaf, terjadi kesalahan saat mengupload file.";
     }
@@ -44,6 +45,7 @@ $stmt->bind_param("sss", $judul, $isi, $target_file);
 if ($stmt->execute()) {
 header ("location:berita.php");
 } else {
+    unlink($target_file);
     echo "Error: " . $stmt->error;
 }
 

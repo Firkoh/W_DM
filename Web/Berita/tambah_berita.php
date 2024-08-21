@@ -1,7 +1,7 @@
         <?php include "header.html" ?>
     <div class="container">
         <h2>Tambah Berita</h2>
-        <form method="post" action="simpan_berita.php">
+            <form method="post" action="simpan_berita.php" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="judul">Judul Berita:</label>
                 <input type="text" class="form-control" id="judul" name="judul" required value="ini Judul">
