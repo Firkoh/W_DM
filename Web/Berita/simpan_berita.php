@@ -38,7 +38,7 @@ if (isset($gambar)) {
   }
 }
 // Simpan berita ke database
-$sql = "INSERT INTO berita (`title`, `news`, `image`) VALUES (?, ?, ?)";
+$sql = "INSERT INTO berita (`title`, `slug`, `image`) VALUES (?, ?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $judul, $isi, $target_file);
 
