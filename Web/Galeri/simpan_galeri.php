@@ -37,13 +37,13 @@ if (isset($gambar)) {
     }
   }
 }
-// Simpan berita ke database
-$sql = "INSERT INTO berita (`title`, `slug`, `image`) VALUES (?, ?, ?)";
+// Simpan gambar ke database
+$sql = "INSERT INTO galeri (`title`, `slug`, `image`) VALUES (?, ?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("sss", $judul, $isi, $target_file);
 
 if ($stmt->execute()) {
-header ("location:berita.php");
+header ("location:galeri.php");
 } else {
     unlink($target_file);
     echo "Error: " . $stmt->error;

@@ -6,16 +6,16 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$id_galeri = $_POST['id'];
+$id_berita = $_POST['id'];
 $judul = $_POST['title'];
 $isi = $_POST['slug'];
 
-// Update galeri data
-$query = "UPDATE galeri SET title='$judul', slug='$isi' WHERE id='$id_galeri'";
+// Update berita data
+$query = "UPDATE berita SET title='$judul', slug='$isi' WHERE id='$id_berita'";
 $result = mysqli_query($conn, $query);
 
 if ($result) {
-    header("Location: galeri.php");
+    header("Location: berita.php");
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($conn);
 }

@@ -9,16 +9,16 @@ if (!is_numeric($id)) {
 }
 
 // Ambil nama file gambar dari database (sesuaikan dengan struktur tabel Anda)
-$stmt = $conn->prepare("SELECT image FROM berita WHERE id = ?");
+$stmt = $conn->prepare("SELECT image FROM galeri WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_assoc();
 $gambar = $row['image'];
 
-// Hapus berita dari database
+// Hapus galeri dari database
 $stmt->close();
-$stmt = $conn->prepare("DELETE FROM berita WHERE id = ?");
+$stmt = $conn->prepare("DELETE FROM galeri WHERE id = ?");
 $stmt->bind_param("i", $id);
 
 if ($stmt->execute()) {
@@ -30,11 +30,11 @@ if ($stmt->execute()) {
         }
     }
 
-    header("Location: berita.php?message=berhasil_dihapus");
+    header("Location: galeri.php?message=berhasil_dihapus");
     exit;
 } else {
     // pesan error
-    echo "Gagal menghapus berita. Silahkan coba lagi.";
+    echo "Gagal menghapus galeri. Silahkan coba lagi.";
 }
 
 $stmt->close();
