@@ -13,7 +13,7 @@ include("../service/basisdata.php");
 ?>
 
 
-    <?php include  "header.html"?>
+    <?php include  "partials/header.html"?>
 
     <div class="container">
         <div class="row">
@@ -29,4 +29,4 @@ include("../service/basisdata.php");
         </div>
 
 <!-- ini footer -->
-<?php include "footer.html" ?>    
+<?php include "partials/footer.html" ?>    

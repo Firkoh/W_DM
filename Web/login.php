@@ -40,7 +40,7 @@ if (isset($_GET['logout'])) {
 ?>
 
 <!-- Login form here -->
-<?php include "headeradmin.html" ?>
+<?php include "partials/headeradmin.html" ?>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-5">
@@ -76,4 +76,4 @@ if (isset($_GET['logout'])) {
                 </form>
             </div>
         </div>
-<?php include "footer.html"?>
+<?php include "partials/footer.html"?>

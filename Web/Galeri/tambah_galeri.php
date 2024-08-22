@@ -24,4 +24,4 @@ function cancelForm() {
     window.location.href = document.referrer; + '?forceReload=true';
 }
 </script>
- <?php include "../partials/footer.html" ?>
+<?php include "../partials/footer.html" ?>
