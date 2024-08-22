@@ -1,3 +1,4 @@
+<?php include "../sessionb.php" ?>
 <?php include "header.html" ?>
 
 <div class="container">

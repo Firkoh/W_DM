@@ -6,16 +6,18 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$id_berita = $_POST['id'];
-$judul = $_POST['title'];
-$isi = $_POST['slug'];
+$ids = $_POST['id'];
+$nip = $_POST['nip'];
+$nama = $_POST['nama'];
+$ttl = $_POST['ttl'];
+$alamat = $_POST['alamat'];
 
 // Update berita data
-$query = "UPDATE berita SET title='$judul', slug='$isi' WHERE id='$id_berita'";
+$query = "UPDATE `pegawai` SET `nip`='$nip',`nama`='$nama',`ttl`='$ttl',`alamat`='$alamat' WHERE id='$ids'";
 $result = mysqli_query($conn, $query);
 
 if ($result) {
-    header("Location: berita.php");
+    header("Location:informasi.php");
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($conn);
 }

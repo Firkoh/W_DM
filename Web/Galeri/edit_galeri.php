@@ -1,3 +1,4 @@
+<?php include "../sessionb.php" ?>
 <?php include "header.html" ?>
 <div class="container text-center">
     <h2>Edit Galeri</h2>

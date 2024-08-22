@@ -1,3 +1,5 @@
+<?php include "../sessionb.php" ?>
+<?php include "../session.php" ?>
         <?php include "header.html" ?>
     <div class="container">
         <h2>Tambah Berita</h2>

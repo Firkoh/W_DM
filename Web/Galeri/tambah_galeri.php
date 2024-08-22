@@ -1,4 +1,5 @@
-        <?php include "header.html" ?>
+<?php include "../sessionb.php" ?>        
+<?php include "header.html" ?>
     <div class="container">
         <h2>Tambah Gambar</h2>
             <form method="post" action="simpan_galeri.php" enctype="multipart/form-data">

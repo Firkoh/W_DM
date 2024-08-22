@@ -1,3 +1,4 @@
+<?php include "../sessionb.php" ?>
 <?php include "header.html"; ?>
 <?php include "../../service/basisdata.php"; ?>
 
@@ -42,7 +43,7 @@
             </div>
 
             <div class="d-flex justify-content-between mt-3">
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-primary form-control">Simpan</button>
             </div>
         </form>
     <?php endif; ?>

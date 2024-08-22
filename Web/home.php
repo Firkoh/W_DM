@@ -1,11 +1,5 @@
 <?php
-session_start(); // Mulai sesi
-
-// Check if user is logged in
-if (!isset($_SESSION['login']) || !$_SESSION['login']) {
-    header("Location: login.php");
-    exit;
-}
+include("session.php");
 
 // Include database connection
 include("../service/basisdata.php");
