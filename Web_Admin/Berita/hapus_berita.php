@@ -1,4 +1,3 @@
-
 <?php
 include "../../service/basisdata.php";
 
@@ -25,7 +24,7 @@ $stmt->bind_param("i", $id);
 if ($stmt->execute()) {
     // Hapus file gambar jika ada
     if ($gambar) {
-        $file_path = "uploads/" . $gambar;
+        $file_path = "../../upGambar/Berita/" . $gambar;
         if (file_exists($file_path)) {
             unlink($file_path);
         }

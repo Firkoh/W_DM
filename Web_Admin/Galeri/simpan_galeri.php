@@ -11,8 +11,14 @@ $judul = $_POST["judul"];
 $isi = $_POST["isi"];
 $gambar = $_FILES["gambar"];
 
-// Upload gambar
-$dir = "uploads/";
+// Mengecek data terlebih dahulu
+$dir = "../../upGambar/Galeri/";
+
+if (!is_dir($dir)) {
+  mkdir($dir, 0777, true); 
+}
+
+// Funngsi mengupload gambar
 $target_file = $dir . basename($gambar["name"]);
 $uploadOk = 1;                                          
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
