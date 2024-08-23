@@ -1,18 +1,11 @@
 <?php
-include("session.php");
-
-// Include database connection
-include("../service/basisdata.php");
-
+ include  "partials/header.html"
 ?>
-
-
-    <?php include  "partials/header.html"?>
 
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h1>Selamat Datang di Website kantor Distrik Mawabuan, <?php echo $_SESSION['username']; ?></h1>
+                <h1>Selamat Datang di Website kantor Distrik Mawabuan</h1>
                 <p>
                     <?php 
                     // Insert your content here
