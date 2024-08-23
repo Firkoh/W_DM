@@ -8,12 +8,11 @@
     $sql = "SELECT * FROM kontak LIMIT 1";
     $result = $conn->query($sql);
 
-    // Cek apakah data ada
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $alamat = $row['alamat'];
         $email = $row['email'];
-        $telepon = $row['kontak']; // Mengasumsikan kolom 'kontak' menyimpan nomor telepon
+        $telepon = $row['kontak'];
     } else {
         echo "<p class='text-center'>Informasi kontak tidak ditemukan.</p>";
     }
@@ -34,7 +33,6 @@
             </div>
         </div>
 
-        <!-- Peta jika diperlukan -->
         <div class="col-md-6 col-sm-12">
             <img src="" alt="" class="img-fluid">
         </div>
