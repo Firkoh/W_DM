@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
             <label for="ttl">Tanggal Lahir:</label>
-            <input type="text" class="form-control" id="ttl" name="ttl" required>
+            <input type="date" class="form-control" id="ttl" name="ttl" required>
         </div>
         <div class="form-group">
             <label for="alamat">Alamat:</label>

@@ -1,7 +1,7 @@
 <?php include "partials/header.html" ?>
 
-<div class="container">
-    <h3 class="text-center mb-4">Informasi</h3>
+<div class="container-fluid">
+    <h3 class="text-center mb-4 mt-4">Informasi</h3>
 
     <?php
     include "../service/basisdata.php";
@@ -10,11 +10,11 @@
 
     if ($result->num_rows > 0) {
         ?>
-        <div class="row">
+        <div class="row justify-content-center">
         <?php
         while ($row = $result->fetch_assoc()) {
             ?>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $row['nama']; ?></h5>

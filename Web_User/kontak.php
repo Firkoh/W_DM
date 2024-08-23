@@ -1,7 +1,7 @@
 <?php include "partials/header.html"; ?>
 <?php include "../service/basisdata.php"; ?>
 
-<div class="container mt-4">
+<div class="container-fluid mt-4">
     <h3 class="text-center mb-4">Kontak</h3>
 
     <?php
@@ -19,28 +19,27 @@
     }
     ?>
 
-    <?php if ($result->num_rows > 0) : ?>
-        <div class="card mb-4">
-            <div class="card-body">
-                <h5 class="card-title text-center">Informasi Kontak</h5>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <strong>Alamat:</strong> <?php echo htmlspecialchars($alamat); ?>
-                    </li>
-                    <li class="list-group-item">
-                        <strong>Email:</strong> <?php echo htmlspecialchars($email); ?>
-                    </li>
-                    <li class="list-group-item">
+    <?php if ($result->num_rows > 0) : // Tampilkan form hanya jika data ada ?>
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Kontak Kami</h5>
+                    <p class="card-text">
+                        <strong>Alamat:</strong> <?php echo htmlspecialchars($alamat); ?><br>
+                        <strong>Email:</strong> <?php echo htmlspecialchars($email); ?><br>
                         <strong>Telepon:</strong> <?php echo htmlspecialchars($telepon); ?>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-footer">
-                <img src="" alt="" class="img-fluid">
+                    </p>
+                </div>
             </div>
         </div>
-    <?php endif; ?>
 
+        <!-- Peta jika diperlukan -->
+        <div class="col-md-6 col-sm-12">
+            <img src="" alt="" class="img-fluid">
+        </div>
+    </div>
+    <?php endif; ?>
 </div>
 
 <?php include "partials/footer.html"; ?>

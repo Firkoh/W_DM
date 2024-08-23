@@ -1,23 +1,45 @@
 <?php
 include("session.php");
-
-// Include database connection
-include("../service/basisdata.php");
-
 ?>
 
+<?php 
+include("../service/basisdata.php");
 
-    <?php include  "partials/header.html"?>
+// Mengambil 
+$sql = "SELECT * FROM kontak";
+$result = $conn->query($sql);
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1>Selamat Datang di Website kantor Distrik Mawabuan, <?php echo $_SESSION['username']; ?></h1>
-                <p>
-                Kantor Distrik Mawabuan berlokasi disamping Jln Trans Papua BaratDaya Kabupaten Tambrauw. Kantor Distrik Mawabuan salah satu distrik yang ada di Kabupaten Tambrauw dari 29 distrik. Pemerintah tambrauw membanggun kantor distrik mawabuan ini untuk mensejahterakanmasyarakat dalam pendidikan, ekonomi dan sosial. Adanya kantor distrikmawabuan meningkatkan kualitas pendidikan,merasakan kebutuhanuntuk mengembangkan sistem informasi dalam pendidikan maupunekonomi sosial.kantor distrik mawabuan membuat website gunamendukung operasi lantor distrik mawabuan yang lebih efisiendanefektif.";
-                </p>
+// Mengecek
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $alamat = $row['alamat'];
+    $email = $row['email'];
+    $call = $row['kontak'];
+} else {
+    $result(error_reporting);
+}
+?>
+
+<?php include  "partials/header.html"?>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Selamat Datang di Website Kantor Distrik Mawabuan</h1>
+                    <p class="card-text">
+                        Kantor Distrik Mawabuan terletak di <?php echo $alamat ?>. Kami adalah salah satu dari 29 distrik di Kabupaten Tambrauw.
+                    </p>
+                    <p class="card-text">
+                        Tujuan kami adalah meningkatkan kesejahteraan masyarakat dalam bidang pendidikan, ekonomi, dan sosial.
+                    </p>
+                    <p class="card-text">
+                        Anda dapat menghubungi kami melalui email <?php echo $email ?> atau telepon <?php echo $call ?>.
+                    </p>
+                </div>
             </div>
         </div>
+    </div>
 
-<!-- ini footer -->
-<?php include "partials/footer.html" ?>    
+<?php include "partials/footer.html"?>

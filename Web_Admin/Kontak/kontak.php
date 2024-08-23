@@ -21,39 +21,38 @@
     ?>
 
     <?php if ($result->num_rows > 0) : // Tampilkan form hanya jika data ada ?>
-<div class="row">
-<div class="col-6">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form method="post" action="edit_kontak.php" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>">
 
-        <form method="post" action="edit_kontak.php" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?php echo htmlspecialchars($row['id']); ?>">
-            
-            <div class="mb-3">
-                <label for="alamat" class="form-label"><strong>Alamat</strong></label>
-                <input class="form-control" type="text" id="alamat" name="alamat" value="<?php echo htmlspecialchars($alamat); ?>" required>
-            </div>
+                <div class="form-group mb-3">
+                    <label for="alamat" class="form-label"><strong>Alamat</strong></label>
+                    <input class="form-control" type="text" id="alamat" name="alamat" value="<?php echo htmlspecialchars($alamat); ?>" required>
+                </div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label"><strong>Email</strong></label>
-                <input class="form-control" type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" required>
-            </div>
+                <div class="form-group mb-3">
+                    <label for="email" class="form-label"><strong>Email</strong></label>
+                    <input class="form-control" type="email" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>" required>
+                </div>
 
-            <div class="mb-3">
-                <label for="telepon" class="form-label"><strong>Telepon</strong></label>
-                <input class="form-control" type="tel" id="telepon" name="telepon" value="<?php echo htmlspecialchars($telepon); ?>" required>
-            </div>
+                <div class="form-group mb-3">
+                    <label for="telepon" class="form-label"><strong>Telepon</strong></label>
+                    <input class="form-control" type="tel" id="telepon" name="telepon" value="<?php echo htmlspecialchars($telepon); ?>" required>
+                </div>
 
-            <div class="d-flex justify-content-between mt-3">
-                <button type="submit" class="btn btn-primary form-control">Simpan</button>
-            </div>
-        </form>
-    <?php endif; ?>
+                <div class="d-flex justify-content-center mt-3">
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
 
-    <!-- Peta jika diperlukan -->
-    <div class="my-4 col-6">
-      <img src="" alt="">
+        <!-- Peta jika diperlukan -->
+        <div class="col-md-6">
+            <img src="" alt="" class="img-fluid">
+        </div>
     </div>
+    <?php endif; ?>
 </div>
-</div>
-
 
 <?php include "../partials/footer.html"; ?>
