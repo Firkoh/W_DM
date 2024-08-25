@@ -8,8 +8,8 @@
     <?php
     include "../../service/basisdata.php";
     $sql = "SELECT * FROM pegawai ORDER BY nip DESC";
+    
     $result = $conn->query($sql);
-
     if ($result->num_rows > 0) {
         ?>
         <div class="row">
@@ -24,8 +24,8 @@
                         <p class="card-text">Tanggal Lahir: <?php echo $row['ttl']; ?></p>
                         <p class="card-text">Alamat: <?php echo $row['alamat']; ?></p>
 
-                        <a href="edit_informasi.php?nip=<?php echo $row['nip']; ?>" class="btn btn-warning">Edit</a>
-                        <a href="hapus_informasi.php?nip=<?php echo $row['nip']; ?>" class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus pegawai ini?')">Hapus</a>
+                        <a href="edit_informasi.php?id=<?php echo $row['id']; ?>" class="btn btn-warning">Edit</a>
+                        <a href="hapus_informasi.php?id=<?php echo $row['id']; ?>" class="btn btn-danger" onclick="return confirm('Apakah anda Yakin ingin menghapus <?php echo $row['nama'];?>')">Hapus</a>
                     </div>
                 </div>
             </div>

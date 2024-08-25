@@ -16,7 +16,6 @@ if ($result->num_rows > 0) {
     $email = $row['email'];
     $call = $row['kontak'];
 } else {
-    $result(error_reporting);
 }
 ?>
 
@@ -35,7 +34,7 @@ if ($result->num_rows > 0) {
                         Tujuan kami adalah meningkatkan kesejahteraan masyarakat dalam bidang pendidikan, ekonomi, dan sosial.
                     </p>
                     <p class="card-text">
-                        Anda dapat menghubungi kami melalui email <?php echo $email ?> atau telepon <?php echo $call ?>.
+                        Anda dapat menghubungi kami melalui email <?php echo $email ?> atau telepon ke nomor telepon ini <?php echo $call ?> .
                     </p>
                 </div>
             </div>

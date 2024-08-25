@@ -6,7 +6,7 @@
     <form method="post" action="simpan_informasi.php" enctype="multipart/form-data">
         <div class="form-group">
             <label for="nip">NIP:</label>
-            <input type="text" class="form-control" id="nip" name="nip" required placeholder="Masukan NiP Pegawai">
+            <input type="text" class="form-control" id="nip" name="nip" required placeholder="Masukan NIP Pegawai">
         </div>
         <div class="form-group">
             <label for="nama">Nama:</label>
@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
             <label for="ttl">Tanggal Lahir:</label>
-            <input type="date" class="form-control" id="ttl" name="ttl" required placeholder="Masukan Tanggal Lahir Pegawai">
+                      <input type="date" class="form-control" id="ttl" name="ttl" min="1950-01-01" max="2006-12-31" required>
         </div>
         <div class="form-group">
             <label for="alamat">Alamat:</label>

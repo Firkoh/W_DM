@@ -2,16 +2,16 @@
 <?php
 include "../../service/basisdata.php";
 
-$nip = $_GET['nip'];
+$ids = $_GET['id'];
 
-if (!isset($nip) || empty($nip)) {
+if (!isset($ids) || empty($ids)) {
     echo "NIP informasi tidak valid.";
     exit;
 }
 
 // Hapus informasi dari database
-$stmt = $conn->prepare("DELETE FROM pegawai WHERE nip = ?");
-$stmt->bind_param("s", $nip);
+$stmt = $conn->prepare("DELETE FROM pegawai WHERE id = ?");
+$stmt->bind_param("s", $ids);
 
 
 if ($stmt->execute()) {

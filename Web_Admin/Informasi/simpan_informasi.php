@@ -28,8 +28,8 @@ if($nip) {
     $result = $checkStmt->get_result();
 
     if($result->num_rows > 0) {
-        // NIP already exists
-        echo "Error: NIP '$nip' already exists. Please use a different NIP.";
+        echo "Error: NIP '$nip' sudah ada. Silakan gunakan NIP yang berbeda.";
+        
     } else {
         // NIP does not exist, proceed with insert
         if($nama && $ttl && $alamat) {
@@ -45,16 +45,13 @@ if($nip) {
 
             $stmt->close();
         } else {
-            echo "Error: All form fields are required.<br>";
-            if(!$nama) echo "Field 'nama' is missing.<br>";
-            if(!$ttl) echo "Field 'ttl' is missing.<br>";
-            if(!$alamat) echo "Field 'alamat' is missing.<br>";
+       echo "ada yang hilang";
         }
     }
 
     $checkStmt->close();
 } else {
-    echo "Error: NIP field is required.";
+    echo "Error: NIP kolom di perlukan";
 }
 
 mysqli_close($conn);

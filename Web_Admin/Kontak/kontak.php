@@ -4,11 +4,9 @@
 
 <div class="container mt-4">
     <h3 class="text-center mb-4">Kontak</h3>
-
     <?php
     $sql = "SELECT * FROM kontak LIMIT 1";
     $result = $conn->query($sql);
-
     // Cek apakah data ada
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
@@ -43,13 +41,15 @@
 
                 <div class="d-flex justify-content-center mt-3">
                     <button type="submit" class="btn btn-primary">Simpan</button>
+
                 </div>
             </form>
         </div>
 
-        <div class="col-md-6">
-            <img src="../../public/Peta.png" alt="" class="img-fluid w-100">
-        </div>
+      <div class="col-md-6 text-center">
+    <label class="text-center"><strong>Lokasi</strong></label>
+    <img src="../../public/Peta.png" alt="" class="img-fluid w-100 border border-dark">
+</div>
     </div>
     <?php endif; ?>
 </div>
