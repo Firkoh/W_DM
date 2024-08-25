@@ -12,7 +12,7 @@ if (isset($_POST['login'])) {
     $hashPass=hash("sha256",$password);
 
 
-    $sele = $conn->prepare("SELECT * FROM admin WHERE username = ? AND password = ?");
+    $sele = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
     $sele->bind_param("ss", $username, $password); // Ikat parameter
     $sele->execute();
     $result = $sele->get_result();

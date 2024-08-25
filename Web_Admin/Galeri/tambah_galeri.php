@@ -5,11 +5,11 @@
             <form method="post" action="simpan_galeri.php" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="judul">Judul Gambar:</label>
-                <input type="text" class="form-control" id="judul" name="judul" required value="ini Judul">
+                <input type="text" class="form-control" id="judul" name="judul" required placeholder="Masukan Judul Gambar">
             </div>
             <div class="form-group">
                 <label for="isi">Keterangan Gambar:</label>
-               <textarea class="form-control" id="isi" name="isi" rows="5" required></textarea>
+               <textarea class="form-control" id="isi" name="isi" rows="5" required placeholder="Masukan Keterangan Gambar"></textarea>
             </div>
             <div class="form-group">
                 <label for="gambar">Pilih Gambar Yang Akan Di Unggah Ke Galeri</label>

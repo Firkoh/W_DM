@@ -34,7 +34,7 @@
         </div>
 
         <div class="col-md-6 col-sm-12">
-            <img src="" alt="" class="img-fluid">
+            <img src="../../public/Peta.png" alt="" class="img-fluid w-100">
         </div>
     </div>
     <?php endif; ?>
