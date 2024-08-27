@@ -12,7 +12,7 @@
             ?>
             <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
               <div class="card">
-                <img src="<?php echo htmlspecialchars('./upGambar/' . $row['image']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>" class="card-img-top">
+                <img src="<?php echo htmlspecialchars('./upGambar/' . $row['Image']); ?>" alt="<?php echo htmlspecialchars($row['Title']); ?>" class="card-img-top">
                 <div class="card-body">
                   <h5 class="card-title"><?php echo $row['title']; ?></h5>
                   <p class="card-text"><?php echo substr($row['slug'], 0, 200) . "..."; ?></p>

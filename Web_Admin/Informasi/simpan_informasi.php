@@ -12,7 +12,6 @@ $nip = isset($_POST["nip"]) ? $_POST["nip"] : null;
 $ttl = isset($_POST["ttl"]) ? $_POST["ttl"] : null;
 $alamat = isset($_POST["alamat"]) ? $_POST["alamat"] : null;
 
-// Debugging: Print the received values
 echo "Received data:<br>";
 echo "Nama: " . htmlspecialchars($nama) . "<br>";
 echo "NIP: " . htmlspecialchars($nip) . "<br>";
