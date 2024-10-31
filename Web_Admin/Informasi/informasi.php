@@ -16,7 +16,7 @@
         <?php
         while ($row = $result->fetch_assoc()) {
             ?>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 col-sm-8 col-xs-12 mb-4" style="width: 18rem;"> 
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $row['nama']; ?></h5>

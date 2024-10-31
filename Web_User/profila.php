@@ -7,7 +7,7 @@
         <div class="card-body">
           <h2 class="card-title text-center">Profil Distrik Mawabuan</h2>
           <p class="card-subtitle text-center mt-4">Kabupaten Tambrauw, Papua Barat Daya</p>
-          <p class="card-text">Mawabuan adalah sebuah distrik yang terletak di Kabupaten Tambrauw, Papua Barat Daya, Indonesia. Distrik ini memiliki luas wilayah sebesar 431,501 km². Berdasarkan data tahun 2019, jumlah penduduk Mawabuan mencapai 494 jiwa.</p>
+          <p class="card-text">Mawabuan adalah sebuah distrik yang terletak di Kabupaten Tambrauw, Papua Barat Daya. Distrik ini memiliki luas wilayah sebesar 431,501 km². Berdasarkan data tahun 2024, jumlah penduduk Mawabuan mencapai 786 jiwa.</p>
         </div>
       </div>
     </div>

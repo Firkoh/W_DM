@@ -18,7 +18,8 @@
     </div>
     <div class="form-group">
         <label for="slug">Isi Berita:</label>
-        <textarea class="form-control" id="slug" name="slug" rows="5" required><?php echo $row['slug']; ?></textarea>
+        <textarea class="form-control" id="slug" name="slug" rows="5" required><?php echo $row['slug']; ?>
+        </textarea>
     </div>
     <button type="submit" class="btn btn-primary">Simpan</button>
     <button type="button" class="btn btn-danger" onclick="cancelForm()">Batal</button>

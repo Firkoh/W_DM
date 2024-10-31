@@ -28,10 +28,10 @@ if ($result->num_rows > 0) {
                 <div class="card-body">
                     <h1 class="card-title">Selamat Datang di Website Kantor Distrik Mawabuan</h1>
                     <p class="card-text">
-                        Kantor Distrik Mawabuan terletak di <?php echo $alamat ?>. Kami adalah salah satu dari 29 distrik di Kabupaten Tambrauw.
+                        Kantor Distrik Mawabuan terletak di jalan trans papua barat daya <?php echo $alamat ?>. distrik mawabuan adalah salah satu dari 29 distrik yang ada di Kabupaten Tambrauw kantor distrik mawabuan berdiri pada tahun 2014 pada zaman pemekaran baru yaitu kabupaten tambrauw sebelum pemekaran masyrakat setempat masih gabung di distrik senopi setelah pemekaran maka dibangun kantor distrik mawabuan terpisah dari distrik senopi .
                     </p>
                     <p class="card-text">
-                        Tujuan kami adalah meningkatkan kesejahteraan masyarakat dalam bidang pendidikan, ekonomi, dan sosial.
+                        Tujuan  adalah untuk meningkatkan kesejahteraan masyarakat dalam bidang pendidikan, ekonomi, dan sosial.
                     </p>
                     <p class="card-text">
                         Anda dapat menghubungi kami melalui email <?php echo $email ?> atau telepon ke nomor telepon ini <?php echo $call ?> .

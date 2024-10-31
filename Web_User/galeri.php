@@ -6,18 +6,18 @@
   <div class="row">
     <?php
     include "../service/basisdata.php";
-    $sql = "SELECT * FROM galeri ORDER BY id DESC";
+    $sql = "SELECT * FROM galeri ORDER BY id ASC";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             ?>
 
-            <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
+            <div class="col-xs-12 col-sm-6 col-md-3 mb-4"> 
               <div class="card">
                 <div class="card-body">
-               <img src="<?php echo htmlspecialchars('./upGambar/' . $row['image']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>" class="card-img-top">
-                
+               <img src="<?php echo htmlspecialchars('./upGambar/' . $row['image']); ?>" alt="<?php echo htmlspecialchars($row['title']); ?>" class="card-img-top" style="width:100%; height: 100px; object-fit: cover;">
+              </div>  
               </div>
             </div>
             <?php
@@ -31,7 +31,7 @@
     // Menutup koneksi
     $conn->close();
     ?>
-  </div>
+ 
 </div>
 
-<?php include "partials/footer.html" ?>
+<?php include "partials/footer.html" ?> 

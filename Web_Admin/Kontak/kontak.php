@@ -48,8 +48,10 @@
 
       <div class="col-md-6 text-center">
     <label class="text-center"><strong>Lokasi</strong></label>
-    <img src="../../public/Peta.png" alt="" class="img-fluid w-100 border border-dark">
-</div>
+        <div class="col-md-12 ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d514.0651743104842!2d132.91276881636134!3d-0.8605768471475943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sasiti!5e1!3m2!1sid!2sid!4v1729506361341!5m2!1sid!2sid" width="500px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
     </div>
     <?php endif; ?>
 </div>

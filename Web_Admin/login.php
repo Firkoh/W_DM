@@ -59,7 +59,9 @@ if (isset($_GET['logout'])) {
         <button type="submit" class="btn btn-primary form-control" name="login">Login</button>
     </div>
     <div class="col-6">
-        <button type="submit" class="btn btn-danger form-control" name="cancel">Cancel</button>
+<a href="../index.php">
+        <span class="btn btn-danger form-control">Cancel</span>
+</a>
     </div>
 </div>
                     <?php if (isset($_SESSION['error'])) { ?>
